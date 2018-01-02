@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body {
+  background: #E3B775;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-auto-rows: minmax(300px, 4)
+  /*margin-left: 3%;*/
+}
+
+.grid > * {
+    background: blue;
+    height: 450px;
+  }
+
+/*Heading*/
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1.4fr;
+  grid-template-areas: 
+  "banner banner banner banner"
+  "banner banner banner banner"
+  "header header . .";
+  height: 320px;
+}
+
+.header {
+  font-size: 2.5em;
+  height: 100px;
+  grid-area: header;
+}
+
+.buenas {
+  margin-top: 45px;
+  margin-bottom: -45px;
+  margin-left: 3%;
+}
+
+.banner {
+  background: #5A9875;
+  display: grid;
+  grid-area: banner;
+  grid-template-columns: 1fr 1fr 1fr 1fr .5fr .5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  ". . . . . . admin"
+  "shares playlists personal . title title title"
+}
+
+.dice {
+  grid-area: dice;
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.bean {
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.down-arrow {
+  cursor: s-resize;
+}
+
+.icon {
+  position: relative;
+  top: 5px;
+}
+
+.peso {
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.skeleton-gif {
+  cursor: n-resize;
+}
+
+.title {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 400;
+  cursor: auto;
+  font-size: 3em;
+  grid-area: title;
+  align-self: flex-start;
+  margin-top: -15px;
+  margin-left: 70px;
+}
+
+.admin {
+  cursor: help;
+  grid-area: admin;
+}
+
+.shares {
+  /*align-self: center;*/
+  /*background: white;*/
+  color: snow;
+  cursor: context-menu;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  grid-area: shares;
+  margin-left: 10%;
+}
+
+.playlists {
+  /*align-self: center;*/
+  cursor: context-menu;
+  font-family: 'Cinzel Decorative', cursive;
+  grid-area: playlists;
+}
+
+.personal {
+  /*align-self: center;*/
+  cursor: context-menu;
+  font-family: 'Cinzel Decorative', cursive;
+  grid-area: personal;
+}
+
+/*Card Styling*/
+.card{
+  background: whitesmoke;
+  cursor: copy;
+  /*background-image: url(images/heart.jpg);*/
+  display: grid;
+  /*background: white;*/
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 1fr 1fr;
+  grid-template-areas: 
+  "img img"
+  "card-content card-content"
+  "card-content card-content"
+}
+
+.bottom-card-section {
+  display: grid;
+  grid-area: card-content;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5px 1fr 1fr 5px 2.5fr 5px 1fr 1fr 5px 1fr 2fr .1fr;
+  grid-template-areas: 
+  "."
+  "card-name"
+  "date"
+  "."
+  "url"
+  "."
+  "playlist"
+  "play-name"
+  "."
+  "attachments"
+  "num";
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.card-picture {
+  background-image: url("images/luna.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: img;
+  position: relative;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas: 
+  ". ."
+  ". toltec"
+}
+
+.heart-icon {
+  margin-left: 10px;
+  margin-top: 5px;
+  opacity: .9;
+}
+
+.iconography {
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  display: inline-block;
+  right: 1em;
+  top: 1em;
+}
+
+.toltec-icon {
+  grid-area: toltec;
+  margin-right: 0;
+}
+
+.card-picture2 {
+  background-image: url("images/mano.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  grid-area: img;
+  position: relative;
+}
+
+.card-picture3 {
+  background-image: url("images/corazon.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  grid-area: img;
+  position: relative;
+}
+
+.card-picture4 {
+  background-image: url("images/sol.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: img;
+  position: relative;
+}
+
+.card-picture5 {
+  background-image: url("images/alacran.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  grid-area: img;
+  position: relative;
+}
+
+.card-picture6 {
+  background-image: url("images/araña.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  grid-area: img;
+  position: relative;
+}
+
+.card-picture7 {
+  background-image: url("images/rosa.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 350px;
+  grid-area: img;
+  position: relative;
+}
+
+.card-picture8 {
+  background-image: url("images/venado-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: img;
+  position: relative;
+}
+
+.card-name {
+  font-family: 'Cinzel Decorative', cursive;
+  grid-area: card-name;
+}
+
+.date {
+  font-weight: lighter;
+  grid-area: date;
+}
+
+.playlist {
+  color: #bd663b;
+  grid-area: playlist;
+}
+
+.playlist-name {
+  color: #5A9875;
+  font-family: 'Cinzel Decorative';
+  font-weight: 400;
+  grid-area: play-name;
+}
+
+.attach {
+  font-weight: lighter;
+  grid-area: attachments;
+}
+
+.card-num {
+  color: #bd663b;
+  font-family: 'Cinzel Decorative', cursive;
+  grid-area: num;
+  font-size: 2em;
+}
+
+.url {
+  background: #973924;
+  cursor: pointer;
+  grid-area: url;
+  padding-top: 15px;
+  padding-left: 10px;
+  overflow-wrap: break-word;
+  width: 280px;
+}
+
+.whole-thing {
+  max-width: 1300px;
+  /*margin-left: 30px;*/
+  margin: auto;
+}
+
+@media screen and (max-width: 1348px) {
+  .grid {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1174px) {
+  .banner {
+  background: #5A9875;
+  display: grid;
+  grid-area: banner;
+  grid-template-columns: 1fr 1fr 1fr 1fr .5fr .5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  ". . . . . admin admin"
+  "shares playlists personal . title title title"
+}
+
+  .title {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 973px) {
+  .banner {
+  background: #5A9875;
+  display: grid;
+  grid-area: banner;
+  grid-template-columns: 1fr 1fr 170px 170px 170px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  ". . title title title . ."
+  ". . shares playlists personal . ."
+  ". . . admin admin . ."
+}
+
+  .grid {
+    margin-left: 25%;
+    /*margin-right: 50%;*/
+  }
+
+  .title {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 524px) {
+  .banner {
+  background: #5A9875;
+  display: grid;
+  grid-area: banner;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "title title title title title title title"
+  "shares shares shares playlists playlists personal personal"
+  ". . admin admin admin admin ."
+}
+
+.shares {
+  margin-left: 10px;
+}
+
+.playlists {
+  margin-left: -20px;
+}
+
+.grid {
+  grid-gap: 15px;
+  margin-left: 13%;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+}
+
+@media screen and (max-width: 380px) {
+  .grid {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (min-width: 1570px) {
+  .banner {
+  background: #5A9875;
+  display: grid;
+  grid-area: banner;
+  grid-template-columns: 1fr 1fr 1fr 1fr .5fr .5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  ". . . . . . admin"
+  "shares playlists personal . . title title"
+}
+}
+
+/*.grid {
+  margin-left: 5%;
+}
+
+.buenas {
+  margin-left: 5%;
+}*/
